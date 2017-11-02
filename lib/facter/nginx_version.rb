@@ -1,5 +1,5 @@
 Facter.add(:nginx_version) do
-  setcode do
+  confine do
      Facter.value(:kernel) != 'windows' and Facter.value(:operatingsystem) != 'nexus'
   end
   setcode do
